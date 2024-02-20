@@ -1,0 +1,868 @@
+*{
+    margin: 0;
+    max-width: 1920px;
+    width: 100%;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    user-select: none;
+}
+
+body{
+    background-color: #232122;
+    overflow-x: hidden;
+
+}
+
+.userfront-toolkit{
+    align-items: center;
+}
+
+.catalog_nav{
+    width: 1520px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calatog_search_ul{
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.catalog_search{
+    width: 100%;
+    height: 40px;
+    background-color: #232122;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
+
+.catalog_search button{
+    margin-right: 40px;
+}
+
+.main_firstSlide{
+    margin-top: 60px;
+    height: 663px;
+    background-color: #222222;
+    display: flex;
+    justify-content: space-between;
+
+
+
+
+}
+
+.main_firstSlide h1{
+    margin-top: 110px;
+    margin-left: 50px;
+    font-family: 'Rubik Maps', system-ui;
+    font-size: 38px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+
+}
+.main_firstSlide span{
+    font-family: 'Rubik Maps', system-ui;
+    font-size: 42px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+
+}
+
+.leftSide_slide{
+    height: 663px;
+    width: 880px;
+    
+}
+
+.rightSide_slide{
+    height: 663px;
+    width: 636px;
+    min-width: 400px;
+    min-height: 400px;
+    
+}
+
+.leftSide_text{
+    margin-top: 30px;
+    margin-left: 7vh;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    width: 400px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 80px;
+    color: white;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonAboutCompany{
+    display: flex;
+    margin-top: 30px;
+    height: 50px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+    border: 1px solid #B31217;
+    cursor: pointer;
+    border-radius: 43px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.main_secondSlide{
+    height: 900px;
+    background: radial-gradient( rgb(50, 25, 25) 21%, #232122 45%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftSideSecond_slide{
+    height: 663px;
+    width: 810px;
+
+}
+
+.naming{
+    font-family: 'Rubik Maps', system-ui;
+    color: #E52D27;
+    margin-left: 50px;
+    font-size: 38px;
+
+}
+
+.secondSlide_text{
+    color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 42px;
+    font-family: 'Rubik Maps', system-ui;
+
+}
+
+.rightSideSecond_Slide{
+    height: 663px;
+    min-width: 400px;
+}
+
+.secondSlide_redTxt{
+    color: white;
+    height: 40px;
+    border: 1px solid #E52D27;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    width:fit-content;
+    margin: 10px;
+    font-family: 'Inter';
+}
+
+.fieldOfRedText{
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.logo{
+    transition: 2s;
+    margin-left: 30px;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.thirdSlide{
+    height: 698px;
+    width: 1518px;
+    background-image:url("../public/wallpaper4.png");
+}
+
+.thirdSlide_leftSide{
+    justify-content:left;
+    font-size: 42px;
+    font-family: 'Rubik Maps', system-ui;
+    padding-top: 30px;
+    color: white;
+    margin-left: 50px;
+    width: 540px;
+}
+
+.eclipseCss{
+    position:absolute;
+    left: -60px;
+    top: 1620px;
+    width: 642px;
+    z-index: 150;
+    height: 972px;
+}
+
+.btnFix{
+    position:relative;
+    z-index: 500;
+    margin-left: "50px"
+}
+
+.imgSmoothTransition{
+    position: absolute;
+    left: 0px;
+    top: 1470px;
+    z-index: 200;
+    width: 1517px;
+}
+
+.imgSmoothTransition2{
+    position: absolute;
+    z-index: 200;
+    left: 0;
+    top: 2150px;
+    width: 1510px;
+}
+
+.thirdSlide_descriptionText{
+    width: 736px;
+    height: 240px;
+    display: flex;
+    margin-left: 50px;
+    z-index: 400;
+    flex-wrap:wrap;
+    margin-top: 60px;
+}
+
+.thirdSlide_descriptionBlock{
+    width: 250px;
+    height: 115px;
+    font-size: 20px;
+    z-index: 400;
+}
+
+.thirdSlide_descriptionDecoration{
+    height: 19px;
+    width: 19px;
+}
+
+.hideForBody{
+    overflow-y: hidden;
+}
+
+
+.profilePage_Wrapper{
+    width: 100%;
+    height: 115vh;
+    max-height:min-content;
+    background-color: #0E0E0E;
+    display: flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.profilePage_leftPanel{
+    position: inherit;
+    margin-top: 65px;
+    margin-left: 100px;
+    width: 380px;
+    min-width: 380px;
+    border-radius: 20px ;
+    background-color: #232122;
+    height: 475px;
+    color: #FFFFFFB2;
+}
+
+.profilePage_leftPanel p{
+    margin: 25px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.profilePage_leftPanel p:hover{
+    color: #E52D27;
+}
+
+.profilePage_cells{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    color: white;
+    margin-top: 65px;
+    margin-left: 15px;
+    width: 880px;
+    height: 600px;
+}
+
+.profilePage_cells h1{
+    margin-left: 10px;
+}
+
+.profilePage_cell_upper_default{
+    background-color: white;
+    width: 414px;
+    height: 194px;
+    margin-right: 22px;
+    background-color: #232122;
+    border-radius: 20px;
+    margin-top: -95px;
+}
+
+.profilePage_cell_upper_default p{
+    margin: 20px;
+}
+
+.profilePage_cell_lower_default p{
+    margin: 20px;
+}
+
+.profilePage_cell_upper_default h2{
+    margin-left: 17px;
+    margin-top: 2px;
+}
+
+.profilePage_cell_upper_default a{
+    position:relative;
+    right: -300px;
+    color: #3F75FF;
+    top: 15px;
+}
+
+.profilePage_cell_lower_default h2{
+    margin-left: 17px;
+    margin-top: 2px;
+}
+
+.profilePage_cell_lower_default a{
+    position:relative;
+    right: -300px;
+    color: #3F75FF;
+    top: 15px;
+}
+
+.profilePage_cell_lower_default{
+    background-color: white;
+    width: 414px;
+    height: 194px;
+    margin-right: 22px;
+    background-color: #232122;
+    border-radius: 20px;
+    margin-top: -95px;
+}
+
+.personalData_cell{
+    display: flex;
+}
+
+.profilePage_cell_upper_active{
+    width: 414px;
+    height: 336px;
+    background-color: #232122;
+    border-radius: 20px;
+    margin-right: 22px;
+    margin-top: 25px;
+}
+
+.profilePage_cell_upper_active h2{
+    margin: 15px;
+}
+
+.profilePage_cell_lower_active h2{
+    margin: 15px;
+}
+
+.profilePage_cell_lower_active{
+    width: 414px;
+    height: 212px;
+    background-color: #232122;
+    border-radius: 20px;
+    margin-right: 22px;
+    margin-top: 15px;
+
+}
+
+.input_box_lastName{
+    position: relative;
+}
+
+.input_box_lastName input{
+    background-color: #232122;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    color: white;
+    border-radius: 11px;
+    border: 1px solid white;
+    width: 200px;
+}
+
+.input_box_lastName label{
+    position: absolute;
+    color: #FFFFFFB2;
+    margin-left: 30px;
+    top: 4px;
+    width: 67px;
+    background-color: #232122;
+    padding: 0 5px;
+}
+
+.input_box_firstName{
+    margin-left: 15px;
+}
+
+.input_box_firstName input{
+    background-color: #232122;
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid white;
+    border-radius: 11px;
+    width: 200px;
+    color: white;
+}
+
+.input_box_firstName label{
+    position: absolute;
+    margin-left: 19px;
+    margin-top: 20px;
+    color: #FFFFFFB2;
+    width: 38px;
+    background-color: #232122;
+    padding: 0 5px;
+}
+
+.input_box_thirdName{
+    margin-left: 15px;
+}
+
+.input_box_thirdName input{
+    background-color: #232122;
+    padding: 10px;
+    margin-top: 30px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 11px;
+    width: 200px;
+}
+
+.input_box_thirdName label{
+    position: absolute;
+    margin-left: 19px;
+    color: #FFFFFFB2;
+    margin-top: 20px;
+
+    width: 74px;
+    background-color: #232122;
+    padding: 0 5px;
+}
+
+.profilePage_cell_upper_active button{
+    width: 171px;
+    height: 38px;
+    color: white;
+    border-radius: 34px;
+    border: 1px solid #E52D27;
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: #E52D27;
+    cursor: pointer;
+}
+
+.profilePage_cell_upper_active a{
+    color: #FFFFFFB2;
+}
+
+.second_cell_password{
+    margin-left: -25px
+}
+
+.second_cell_password input{
+    position: relative;
+    left: 40px;
+    background-color: #232122;
+    padding: 10px;
+    margin-top: 30px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 11px;
+    width: 200px;
+}
+
+.second_cell_password label{
+    position: absolute;
+    margin-top: 20px;
+    color: #FFFFFFB2;
+    background-color: #232122;
+    padding: 0 5px;
+    z-index: 1000;
+    margin-left: 50px;
+}
+
+.profilePage_cell_lower_active button{
+    width: 171px;
+    height: 38px;
+    color: white;
+    border-radius: 34px;
+    border: 1px solid #E52D27;
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: #E52D27;
+    cursor: pointer;
+
+}
+
+.profilePage_cell_lower_active input{
+    position: relative;
+    left: 40px;
+    background-color: #232122;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: -25px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 11px;
+    width: 200px;
+}
+
+.profilePage_cell_lower_active label{
+    position: absolute;
+    margin-top: 17px;
+    color: #FFFFFFB2;
+    background-color: #232122;
+    padding: 0 5px;
+    z-index: 1000;
+    margin-left: 25px;
+    width: 56px;
+}
+
+.profilePage_cell_lower_active a{
+    color: #FFFFFFB2;
+}
+
+.profileDelivery_Wrapper     h1{
+    color: white;
+    margin-top: 63px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+
+}
+
+.profileDelivery_addressList{
+    background-color: #232122;
+    height: 430px;
+    width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border-radius: 20px;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.profileDelivery_addressList h1{
+    color: white;
+}
+
+.profileDelivery_addressList img{
+    width: 61px;
+    height: 61px;
+}
+
+.profileDelivery_addressList p{
+    width: 290px;
+    color: white;
+    margin-top: 15px;
+}
+
+.profileDelivery_addressList button{
+    margin-top: 20px;
+    width: 220px;
+    height: 38px;
+    background-color: #E52D27;
+    border: 1px solid #E52D27;
+    border-radius: 34px;
+    color: white;
+    cursor: pointer;
+}
+
+.profileDelivery_addressList_textNbutton{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+  
+}
+
+.profilePage_Orders{
+    width: 850px;
+    height: 430px;
+    background-color: #232122;
+}
+
+.profilePageOrders_Wrapper{
+    color: white;
+}
+
+.profilePageOrders_Wrapper h1{
+    margin-top: 63px;
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+
+.profilePage_Orders{
+    margin-left: 20px;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+
+.profilePage_Orders img{
+    width: 61px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 61px;
+    margin-bottom: 17px;
+}
+
+.profileCompany_ModalHalf input{
+    width: 338px;
+}
+
+.profileCompany_ModalHalf{
+    display: flex;
+    width: 730px;
+    flex-wrap: nowrap;
+}
+
+.profileCompany_ModalThird input{
+    width: 219px;
+    margin: 5px;
+}
+
+.profileCompany_ModalThird{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: nowrap;
+}
+
+.fullWidthInput{
+    width: 713px;
+}
+
+.profileCompany_Modal label{
+    margin-bottom: -15px;
+}
+
+
+.profileCompany_Modal{
+    box-sizing: border-box;
+      overflow: hidden;
+    display: grid;
+    flex-wrap: wrap;
+    width: 777px;
+    border: 1px solid #E52D27;
+    height: 700px;
+    position: absolute;
+    background-color: #232122;
+    right: auto;
+    color: white;
+    padding: 30px;
+    left: 50%;
+    margin-left: -388px;
+    margin-top: 15px;
+    border-radius: 20px;
+    z-index: 1000;
+}
+
+.profileCompany_Modal input{
+    height: 47px;
+    color: white;
+    padding-left: 10px;
+    background-color: #232122;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF99;
+}
+
+.profileCompany_Modal button{
+    width: 217px;
+    height: 38px;
+    border-radius: 34px;
+    background-color: #E52D27;
+    border: 1px solid #E52D27;
+    color: white;
+}
+
+.fullwidthBGC{
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212B2;
+}
+
+.cartPage_wrapper{
+    width: 100%;
+    height:86vh;
+    padding-top: 13vh;
+    padding-left: 9vh;
+    color: white;
+    background-color: #0E0E0E;
+}
+
+.nameCart hr{
+    margin-top: 20px;
+    color: #ffffff77;
+    width: 90%;
+}
+
+.cartDetails p{
+    background-color: #232122;
+    position: inherit;
+}
+
+.cartDetails{
+    width: 420px;
+    height: 310px;
+    text-align: center;
+    border-radius: 15px;
+    display: grid;
+    margin-left: 20px;
+    text-align: start;
+    padding: 15px;
+    background-color: #232122;
+}
+
+.cartItem{
+    background-color: #232122;
+    width: 880px;
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 15px;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+.cartItem div{
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    border: 1px solid #E52D27;
+    height: 47px;
+    font-size: large;
+    border-radius: 5px;
+    min-width: 130px;
+    width: 145px;
+    align-items: center;
+}
+
+.cartItem button{
+    background-color: #232122;
+    border: 1px solid #232122;
+    color: white;
+    width: 50px;
+}
+
+.cartList{
+    width: 900px;
+    height: 74vh;
+    overflow-y: auto;
+}
+
+.cartItem img{
+    margin-left: 20px;
+    width: 89px;
+    height: 94px;
+}
+
+.cartNaming{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 270px;
+    min-width: 240px;
+}
+
+
+.cartNaming p{
+    width: 10px;
+    max-width: 40px;
+}
+
+.cartBottomSide{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+    margin-top: 30px;
+    padding-right: 13px;
+}
+
+.cartPrice{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-left: 40px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+}
+
+.cartDetails button{
+    position: relative;
+    bottom: 0px;
+    width: 420px;
+    height: 38px;
+    background-color: #E52D27;
+    border: 1px solid #E52D27;
+    border-radius: 34px;
+    color: white;
+}
+
+.cartDetails div hr{
+    width: 70%;
+	padding: 0;
+	height: 0;
+    margin-left: 61px;
+	border: none;
+	border-top: 2px dashed #ddd;
+	background: #232323;
+    margin-top: -5px;
+
+}
+

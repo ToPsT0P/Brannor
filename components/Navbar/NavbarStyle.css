@@ -1,0 +1,96 @@
+*{
+    font-family: 'Inter', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.mainField{
+    width: 97%;
+    height: 13vh;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userPngStyle{
+    margin-right: 40px;
+    height: 24px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.buttonLogin{
+    height: 38px;
+    gap: 10px;
+    border: 1px solid #E52D27;
+    background-color: #232323;
+    margin-left: 10px;
+    border-radius: 34px;
+    color: white;
+    cursor: pointer;
+}
+
+.logoutBut {
+    margin-left: 15px;
+}
+
+
+.inputDiv{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #222222;
+    padding-left: 9px;
+    margin-right: 25px;
+    color: #FFFFFF99;
+    border: 1px solid #FFFFFF99;
+    border-radius: 26px;
+    width: 407px;
+    height: 42px;
+    border-radius: 26px;
+}
+
+.inputDiv input{
+    margin-left: 10px;
+    color: white;
+    width: 350px;
+    height: 42px;
+    background-color: #222222;
+    border: 0px;
+
+}
+
+.inputDiv img{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
