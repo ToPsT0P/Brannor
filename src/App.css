@@ -8,6 +8,7 @@
     user-select: none;
 }
 
+
 body{
     background-color: #232122;
     overflow-x: hidden;
@@ -119,6 +120,7 @@ body{
     margin-top: 30px;
     height: 50px;
     width: 300px;
+    margin-left: 50px;
     justify-content: center;
     align-items: center;
     background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
@@ -134,7 +136,6 @@ body{
 
 .main_secondSlide{
     height: 900px;
-    background: radial-gradient( rgb(50, 25, 25) 21%, #232122 45%);
     display: flex;
     justify-content: space-between;
 }
@@ -165,6 +166,8 @@ body{
 .rightSideSecond_Slide{
     height: 663px;
     min-width: 400px;
+    max-height: 700px;
+    max-width: 700px;
 }
 
 .secondSlide_redTxt{
@@ -199,28 +202,23 @@ body{
 
 .thirdSlide{
     height: 698px;
-    width: 1518px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image:url("../public/wallpaper4.png");
 }
 
 .thirdSlide_leftSide{
     justify-content:left;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 42px;
     font-family: 'Rubik Maps', system-ui;
     padding-top: 30px;
     color: white;
     margin-left: 50px;
-    width: 540px;
 }
 
-.eclipseCss{
-    position:absolute;
-    left: -60px;
-    top: 1620px;
-    width: 642px;
-    z-index: 150;
-    height: 972px;
-}
 
 .btnFix{
     position:relative;
@@ -231,9 +229,8 @@ body{
 .imgSmoothTransition{
     position: absolute;
     left: 0px;
-    top: 1470px;
+    top: 1522px;
     z-index: 200;
-    width: 1517px;
 }
 
 .imgSmoothTransition2{
@@ -241,7 +238,6 @@ body{
     z-index: 200;
     left: 0;
     top: 2150px;
-    width: 1510px;
 }
 
 .thirdSlide_descriptionText{
@@ -274,19 +270,15 @@ body{
 .profilePage_Wrapper{
     width: 100%;
     height: 115vh;
+    display: flex;
+    justify-content: center;
     max-height:min-content;
     background-color: #0E0E0E;
-    display: flex;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
 }
 
 .profilePage_leftPanel{
     position: inherit;
     margin-top: 65px;
-    margin-left: 100px;
     width: 380px;
     min-width: 380px;
     border-radius: 20px ;
@@ -564,6 +556,9 @@ body{
 .profilePage_cell_lower_active a{
     color: #FFFFFFB2;
 }
+.profileDelivery_Wrapper {
+    width: fit-content;
+}
 
 .profileDelivery_Wrapper     h1{
     color: white;
@@ -628,6 +623,7 @@ body{
 
 .profilePageOrders_Wrapper{
     color: white;
+    width: fit-content;
 }
 
 .profilePageOrders_Wrapper h1{
@@ -735,8 +731,9 @@ body{
 .cartPage_wrapper{
     width: 100%;
     height:86vh;
+    display: grid;
     padding-top: 13vh;
-    padding-left: 9vh;
+    justify-content: center;
     color: white;
     background-color: #0E0E0E;
 }
@@ -744,7 +741,7 @@ body{
 .nameCart hr{
     margin-top: 20px;
     color: #ffffff77;
-    width: 90%;
+    width: 101%;
 }
 
 .cartDetails p{
@@ -758,7 +755,7 @@ body{
     text-align: center;
     border-radius: 15px;
     display: grid;
-    margin-left: 20px;
+    margin-left: 7%;
     text-align: start;
     padding: 15px;
     background-color: #232122;
@@ -797,7 +794,9 @@ body{
 }
 
 .cartList{
-    width: 900px;
+    min-width: 800px;
+    width: 990px;
+    max-width: 1200px;
     height: 74vh;
     overflow-y: auto;
 }

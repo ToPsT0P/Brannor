@@ -18,10 +18,10 @@ a{
 }
 
 .mainField{
-    width: 97%;
-    height: 13vh;
+    height: 8vh;
     min-height: 90px;
     display: flex;
+    background-color: rgba(22, 22, 22, 0.28);
     align-items: center;
     justify-content: center;
 }
