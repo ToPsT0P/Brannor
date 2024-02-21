@@ -1,18 +1,29 @@
 import React, { useEffect, useState } from "react";
 import CartItem from "../../components/CartItem/CartItem";
-import png1 from "../../public/pngCart.png"
 
 const CartPage = () => {
 
     const [dataArray, setDataArray] = useState([
         {
+            id: 1,
             imageURL: "rotor.png",
             name: "shit not shit ",
             price: "41000",
-            howmuch: 1,
+            quantity: 1,
+        },
+        {
+            id: 2,
+            imageURL: "addressImg.png",
+            name: "some shit ", 
+            price: "2222",
+            quantity: 2,
         }
 
-    ]) 
+    ])
+    
+    const deleteArrayObj = (props) => {
+        setDataArray(dataArray.filter(p => p !== props))
+    }
 
     return(
         <div className="cartPage_wrapper">
@@ -22,35 +33,44 @@ const CartPage = () => {
             </div>
             <div className="cartBottomSide">
                 <div className="cartList">
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
-                    <CartItem  changeData = {setDataArray} item={dataArray[0]}/>
+                    {dataArray.map((item, i) => {return (
+                    <CartItem key={i} 
+                     item={item} 
+                     setDataArray = {setDataArray} 
+                     dataArray={dataArray} 
+                     deleteArrayObj={deleteArrayObj}/>)})}
+                     {dataArray.length == 0 && <h2>Товаров в корзине нет</h2>}
 
                 </div>
                 <div className="cartDetails">
                     <h2>Детали заказа</h2>
-                    <div style={{display:"flex", flexWrap:"nowrap"}}>
-                        <p style={{width:"59px"}}>Товары</p>
-                        <div style={{width:"70%", height:"20px", marginTop:"-7px" , borderBottom:"3px dotted white"}}></div>
+                    <div className="orderDetailsAll">
+                        <p>Товары</p>
+                        <div className="dottedLine"></div>
+                        <div className="orderDetailsCounters" >
+                            <p>{dataArray.length}</p>
+                        </div>
                     </div>
-                    <div style={{display:"flex", flexWrap:"nowrap"}}>
-                        <p style={{width:"59px"}}>скидка</p>
-                        <div style={{width:"70%", height:"20px", marginTop:"-7px" , borderBottom:"3px dotted white"}}></div>
-                        
+                    <div className="orderDetailsAll">
+                        <p>скидка</p>
+                        <div className="dottedLine"></div>
+                        <div className="orderDetailsCounters">
+                            0Р
+                        </div>
                     </div>
-                    <div style={{display:"flex", flexWrap:"nowrap"}}>
-                        <p style={{width:"59px"}}>промо</p>
-                        <div style={{width:"70%", height:"20px", marginTop:"-7px" , borderBottom:"3px dotted white"}}></div>
+                    <div className="orderDetailsAll">
+                        <p>промо</p>
+                        <div className="dottedLine"></div>
+                        <div className="orderDetailsCounters">
+                            ASS21
+                        </div>
                     </div>
-                    <div style={{display:"flex", flexWrap:"nowrap"}}>
-                        <b style={{width:"59px"}}>Итого</b>
-                        <div style={{width:"100%", height:"20px", marginTop:"-7px" , borderBottom:"3px dotted white"}}></div>
+                    <div className="orderDetailsAll">
+                        <b>Итого</b>
+                        <div className="dottedLine"></div>
+                        <div className="orderDetailsCounters">
+                            123213
+                        </div>
                     </div>
                     <button>Оформить заказ</button>
                 </div>

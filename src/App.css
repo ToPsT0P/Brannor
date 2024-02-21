@@ -790,7 +790,8 @@ body{
     background-color: #232122;
     border: 1px solid #232122;
     color: white;
-    width: 50px;
+    height: 90%;
+    cursor: pointer;
 }
 
 .cartList{
@@ -803,8 +804,8 @@ body{
 
 .cartItem img{
     margin-left: 20px;
-    width: 89px;
-    height: 94px;
+    width: 75px;
+    height: 75px;
 }
 
 .cartNaming{
@@ -865,3 +866,26 @@ color: #FFFFFF;
 
 }
 
+.orderDetailsCounters{
+    position:"relative";
+    right: 0;
+    width: min-content;
+    margin-left: 5px;
+}
+
+.orderDetailsAll{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.orderDetailsAll p, b {
+    width: 58px;
+}
+
+.dottedLine{
+    width: 70%;
+    height: 20px;
+    margin-top: -7px;
+    border-bottom:3px dotted white;
+
+}
