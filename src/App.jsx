@@ -10,6 +10,7 @@ import DeliverPage from '../pages/DeliveryPage/DeliveryPage.jsx'
 import YourOrder from '../pages/YourOrder/YourOrder.jsx'
 import CompanyPage from '../pages/CompanyPage/CompanyPage.jsx'
 import CartPage from '../pages/CartPage/CartPage.jsx'
+import PlacingOrder from '../pages/PlacingOrder/PlacingOrder.jsx'
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
           <Route path="/profile/cart" element={<RequireAuth><CartPage/></RequireAuth>}  />
           <Route path="/profile/yourOrder" element={<RequireAuth><YourOrder/></RequireAuth>}  />
           <Route path="/profile/addCompany" element={<RequireAuth><CompanyPage/></RequireAuth>}  />
+          <Route path="/profile/PlacingOrder" element={<RequireAuth><PlacingOrder/></RequireAuth>}  />
 
           
           <Route path="/" element={<MainPage/>}/>

@@ -72,7 +72,7 @@ const CartPage = () => {
                             123213
                         </div>
                     </div>
-                    <button>Оформить заказ</button>
+                    <button onClick={() => {window.location.assign("/profile/PlacingOrder")}}>Оформить заказ</button>
                 </div>
 
             </div>

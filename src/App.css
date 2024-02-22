@@ -852,6 +852,7 @@ color: #FFFFFF;
     border: 1px solid #E52D27;
     border-radius: 34px;
     color: white;
+    cursor: pointer;
 }
 
 .cartDetails div hr{
@@ -888,4 +889,52 @@ color: #FFFFFF;
     margin-top: -7px;
     border-bottom:3px dotted white;
 
+}
+
+.PlacingOrder_wrapper{
+    padding: 4%;
+    height: fit-content;
+    width: 92%;
+    background: #000;
+    color: white;
+}
+
+.PlacingOrder_wrapper h1{
+    margin-bottom: 15px;
+    font-family: 'Rubik Maps', system-ui;
+
+}
+
+.PlacingOrder_wrapper hr{
+    color: #FFFFFF80;
+    background-color: #FFFFFF80;
+    background: #FFFFFF80;
+}
+
+.placingOrder_mainBlock{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.placingOrder_mainBlock h3{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.placingOrder_deliveryType{
+
+    width: 252px;
+    height: 102px;
+    margin-top: 12px;
+    margin-right: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+
+}
+
+.fullheight{
+    height: 300px;
+    
 }
