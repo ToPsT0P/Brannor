@@ -310,6 +310,7 @@ body{
     margin-top: 65px;
     margin-left: 15px;
     width: 875px;
+    min-width: 875px;
     height: 600px;
 }
 
@@ -914,7 +915,8 @@ color: #FFFFFF;
 .placingOrder_mainBlock{
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    width: 532px;
+    height: 220px;
 }
 
 .placingOrder_mainBlock h3{
@@ -926,15 +928,85 @@ color: #FFFFFF;
 
     width: 252px;
     height: 102px;
-    margin-top: 12px;
+    cursor: pointer;
     margin-right: 12px;
 
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
 
 }
 
 .fullheight{
-    height: 300px;
+    height: 220px;
     
+}
+
+.placingOrder_deliveryType h5{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    width: 172px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 15px;
+}
+
+.placingOrder_upperCards{
+    width: 1000px;
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.placingOrder_rowingCards{
+    width: 798px;
+    display: flex;
+    margin-top: 12px;
+    flex-wrap: nowrap;
+}
+
+.placingOrder_deliveryType p{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    width: 100%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);  
+    padding-left: 15px;
+}
+
+.PlacingOrder_wrapper h3{
+    margin-top: 30px;
+}
+
+.PlacingOrdersPayment{
+    width: 796px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.PlacingOrdersPayment div{
+    width: 386px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 102px;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.PlacingOrdersPayment h4{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    width: 100%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgb(255, 255, 255);  
+    padding-left: 15px;
 }

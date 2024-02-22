@@ -1,4 +1,5 @@
 import React from "react";
+import PlacingOrdersCards from "../../components/PlacingOrdersCards/PlacingOrdersCards";
 
 const PlacingOrder = () => {
 
@@ -7,16 +8,21 @@ const PlacingOrder = () => {
         <div className="PlacingOrder_wrapper">
             <h1>Оформление заказа</h1>
             <hr />
-            <div className="placingOrder_mainBlock">
-                <h3>Способ получения</h3>
-                <div className="placingOrder_deliveryType">
-                    <h4>Доставка Курьером по Москве</h4>
-
+            <PlacingOrdersCards/>
+            <h3>Способ оплаты</h3>
+            <div className="PlacingOrdersPayment">
+                <div style={{marginRight:"10px"}}>
+                    <h4>Картой на сайте</h4>
                 </div>
-                <div className="placingOrder_deliveryType"></div>
-                <div className="placingOrder_deliveryType fullheight"></div>
-                <div className="placingOrder_deliveryType"></div>
-                <div className="placingOrder_deliveryType"></div>
+                <div>
+                    <h4>Наличными при получении</h4>
+                </div>
+                <div style={{marginRight:"10px"}}>
+                    <h4>Наложенный платеж</h4>
+                </div>
+                <div>
+                    <h4>Безналичная оплата</h4>
+                </div>
             </div>
 
         </div>
