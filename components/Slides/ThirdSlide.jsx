@@ -1,5 +1,4 @@
 import React from "react";
-import eclipseWidth from "../../public/eclipseWidth.png"
 import textDecorate1 from "../../public/textDecorate1.png"
 
 const ThirdSlide = () => {
@@ -7,7 +6,6 @@ const ThirdSlide = () => {
     return(
         <div className="thirdSlide">
                 <div className="thirdSlide_leftSide">
-                    <img src={eclipseWidth} className="imgSmoothTransition" alt="" />
                     <h2 className="naming" style={{paddingTop: "10px", position:"relative", zIndex: 1000}}>КОЛОДКИ</h2>
                     <p className="thirdSlide_leftSide" style={{position:"relative", zIndex: 1000}}>Колодки Brannor это комфортное и безопасное вождение</p>
                     <button className="buttonAboutCompany btnFix">Подробнее</button>

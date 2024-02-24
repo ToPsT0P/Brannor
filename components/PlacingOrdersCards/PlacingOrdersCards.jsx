@@ -3,11 +3,11 @@ import React from "react";
 const PlacingOrdersCards = () => {
 
     return(
-        <>
+            <>
                 <h3>Способ получения</h3><br/>
                 <div className="placingOrder_rowingCards">
                     <div className="placingOrder_mainBlock">
-                        <div className="placingOrder_deliveryType">
+                        <div className="placingOrder_deliveryType activeDeliveryCard">
                             <h5>Доставка Курьером по Москве</h5>
                             <p>Бесплатно / до 3 дней</p>
                         </div>
@@ -30,7 +30,7 @@ const PlacingOrdersCards = () => {
                     </div>
 
                 </div>
-    </>
+        </> 
     )
 }
 
