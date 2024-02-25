@@ -942,6 +942,13 @@ color: #FFFFFF;
 
 }
 
+.placingOrder_deliveryType img{
+    z-index: -1000;
+    width: 24px;
+    height: 23px;
+    position: relative;
+}
+
 .fullheight{
     height: 220px;
     
@@ -1019,6 +1026,11 @@ color: #FFFFFF;
 
 .activeDeliveryCard{
     border: 1px solid rgb(148, 0, 0);
+
+}
+
+.activeDeliveryCard img{
+    z-index: 2000;
 }
 
 .PlacingOrdersPlate{
@@ -1066,4 +1078,44 @@ color: #FFFFFF;
 
 .PlacingOrdersPlate_text p{
     width: fit-content;
+}
+
+.cartList_input{
+    /* Rectangle 190 */
+
+    box-sizing: border-box;
+    display: flex;
+    width: 555px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #0E0E0E;
+    border: 1px solid #E52D27;
+    align-items: center;
+    
+}
+
+.cartList_input input{
+    height: 95%;
+    border-radius: 5px;
+    background-color: #0E0E0E;
+    color: #FFFFFFCC;
+    padding-left: 15px;
+    border: 1px solid #0E0E0E;
+
+}
+
+.cartList_input img{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.placingOrder_deliveryType_in{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.placingOrder_deliveryType_in img{
+    margin-top: 12px;
+    margin-left: 12px;
 }
