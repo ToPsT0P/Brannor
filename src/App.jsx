@@ -14,6 +14,8 @@ import PlacingOrder from '../pages/PlacingOrder/PlacingOrder.jsx'
 
 function App() {
 
+  const [dataArray, setDataArray] = useState()
+
   Userfront.init("9ny6vgyb");
 
   function LoginPage(){
@@ -24,6 +26,24 @@ function App() {
       </div>
     )
   }
+
+  setInterval(() => {
+    console.log(dataArray)
+  }, 1000);
+
+  fetch('https://PROJECT_TOKEN.mockapi.io/users/1/tasks', {
+    method: 'GET',
+    headers: {'content-type':'application/json'},
+  }).then(res => {
+    if (res.ok) {
+        setDataArray(res.json()) 
+    }
+    // handle error
+  }).then(tasks => {
+    // Do something with the list of tasks
+  }).catch(error => {
+    // handle error
+  })
 
   function RequireAuth({ children }) {
     let location = useLocation();

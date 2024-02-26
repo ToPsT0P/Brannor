@@ -304,6 +304,7 @@ body{
 
 .profilePage_leftPanel p:hover{
     color: #E52D27;
+    transition: 0.4s;
 }
 
 .profilePage_cells{
@@ -372,7 +373,7 @@ body{
     margin-right: 22px;
     background-color: #232122;
     border-radius: 20px;
-    margin-top: -90px;
+    margin-top: -107px;
 }
 
 .personalData_cell{
@@ -1008,7 +1009,6 @@ color: #FFFFFF;
     text-align: center;
     height: 102px;
     margin-top: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
 }
 
@@ -1118,4 +1118,14 @@ color: #FFFFFF;
 .placingOrder_deliveryType_in img{
     margin-top: 12px;
     margin-left: 12px;
+}
+
+.activeDeliCard{
+
+    border:1px solid rgb(148, 0, 0);
+}
+
+.notActiveDeliCard{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
