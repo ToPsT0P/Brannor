@@ -903,7 +903,7 @@ color: #FFFFFF;
     min-width: 1283px;
     height: fit-content;
     width: 92%;
-    background: #000;
+    background: rgba(14, 14, 14, 1);
     color: white;
 }
 
@@ -1140,4 +1140,72 @@ color: #FFFFFF;
 
 .PlacingOrdersPlate_topSide img{
     margin-bottom: 5px;
+}
+
+.personalDataInputs div{
+    width: 250px;
+    margin-right: 20px;
+}
+
+.personalDataInputs input{
+    /* Frame 40278 */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+    background-color: rgba(14, 14, 14, 1);
+    width: 250px;
+    height: 39px;
+    border: 1px solid rgba(127, 127, 127, 0.489);
+    border-radius: 5px;
+}
+
+.personalDataInputs{
+    display: flex;
+    color: #ffffffe4;
+    margin-top: 20px;
+    color: white;
+    flex-wrap: nowrap;
+}
+
+.personalDataInputs input{
+    color: white;
+}
+
+.inputMoreData{
+    margin-top: 20px;
+    width: 461px;
+    color: white;
+    height: 130px;
+}
+
+.inputMoreData input{
+    width: 100%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    height: 100%;
+    text-align: start;
+    padding: 10px;
+    resize: none;
+    border-radius: 7px;
+    background-color: rgba(14, 14, 14, 1);
+}
+
+.OrderCompleteButton{
+  width: 420px;
+  position: relative;
+  bottom: -150px;
+  margin-left: 30px;
+  height: 38px;
+  background-color: #E52D27;
+  border: 1px solid #E52D27;
+  border-radius: 34px;
+  color: white;
+  cursor: pointer;
 }

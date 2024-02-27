@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import pngCart from "../../public/pngCart.png"
 import Plate from "./Plate";
 
@@ -16,7 +16,7 @@ const PlacingOrderPlate = ({dataArray}) => {
                             )})}
  
                         <div>
-                            ЦЕНЫ
+                            <button className="OrderCompleteButton">Оформить заказ</button>
                         </div>
     
 
