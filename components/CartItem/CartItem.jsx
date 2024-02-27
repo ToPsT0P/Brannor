@@ -26,7 +26,7 @@ const CartItem = ({item, setDataArray, dataArray, deleteArrayObj}) => {
                             <button className="cartNamingButton" onClick={() => addQuantity(item)}>+</button>
                         </div>
                         <h3 className="cartPrice">{item.quantity > 0 ? item.price * item.quantity : deleteArrayObj(item)}Р</h3>
-                        <a href=""></a>
+                        
                     </div>
         </>
     )

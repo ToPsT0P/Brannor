@@ -1127,5 +1127,17 @@ color: #FFFFFF;
 
 .notActiveDeliCard{
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
+    
+.PlacingOrdersPlate_wrapper hr{
+    color: #23232390;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.PlacingOrdersPlate_topSide img{
+    margin-bottom: 5px;
 }

@@ -2,35 +2,13 @@ import React, { useEffect, useState } from "react";
 import CartItem from "../../components/CartItem/CartItem";
 import cartList_inputIMG from "../../public/CartList_inputIMG.png"
 
-const CartPage = () => {
+const CartPage = ({dataArray, setDataArray}) => {
 
     const promo = ["123qwe","asdqwe"]
     const [userPromo, setUserPromo] = useState("")
     const [promoAnswer, setPromoAnswer] = useState(false)
-    const [dataArray, setDataArray] = useState([
-        {
-            id: 1,
-            imageURL: "rotor.png",
-            name: "shit not shit ",
-            price: "41000",
-            quantity: 1,
-        },
-        {
-            id: 1,
-            imageURL: "rotor.png",
-            name: "shit not shit ",
-            price: "41000",
-            quantity: 1,
-        },
-        {
-            id: 2,
-            imageURL: "addressImg.png",
-            name: "some shit ", 
-            price: "2222",
-            quantity: 2,
-        }
 
-    ])
+  
 
     const checkPromo = () => {
         let i = 0

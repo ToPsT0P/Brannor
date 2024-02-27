@@ -14,17 +14,16 @@ import PlacingOrder from '../pages/PlacingOrder/PlacingOrder.jsx'
 
 function App() {
 
-  const [dataArray, setDataArray] = useState()
+  Userfront.init("9ny6vgyb");
 
+  const [dataArray, setDataArray] = useState([])
 
   useEffect(() => {
-    fetch('https://6566dedb64fcff8d730f2f2b.mockapi.io/Items')
+    fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/goods')
     .then((res) => {return res.json()})
     .then((json) => {setDataArray(json)})
 
   }, [])
-
-  Userfront.init("9ny6vgyb");
 
   function LoginPage(){
     return(
@@ -62,10 +61,10 @@ function App() {
 
           </Route>
           <Route path="/profile/delivery" element={<RequireAuth><DeliverPage/></RequireAuth>}  />
-          <Route path="/profile/cart" element={<RequireAuth><CartPage/></RequireAuth>}  />
+          <Route path="/profile/cart" element={<RequireAuth><CartPage dataArray={dataArray} setDataArray={setDataArray}/></RequireAuth>}  />
           <Route path="/profile/yourOrder" element={<RequireAuth><YourOrder/></RequireAuth>}  />
           <Route path="/profile/addCompany" element={<RequireAuth><CompanyPage/></RequireAuth>}  />
-          <Route path="/profile/PlacingOrder" element={<RequireAuth><PlacingOrder/></RequireAuth>}  />
+          <Route path="/profile/PlacingOrder" element={<RequireAuth><PlacingOrder dataArray={dataArray} setDataArray={setDataArray}/></RequireAuth>}  />
 
           
           <Route path="/" element={<MainPage/>}/>
