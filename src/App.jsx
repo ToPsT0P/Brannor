@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from '../components/Navbar/Navbar'
 import MainPage from '../pages/MainPage/MainPage.jsx'
@@ -16,6 +16,14 @@ function App() {
 
   const [dataArray, setDataArray] = useState()
 
+
+  useEffect(() => {
+    fetch('https://6566dedb64fcff8d730f2f2b.mockapi.io/Items')
+    .then((res) => {return res.json()})
+    .then((json) => {setDataArray(json)})
+
+  }, [])
+
   Userfront.init("9ny6vgyb");
 
   function LoginPage(){
@@ -26,24 +34,6 @@ function App() {
       </div>
     )
   }
-
-  setInterval(() => {
-    console.log(dataArray)
-  }, 1000);
-
-  fetch('https://PROJECT_TOKEN.mockapi.io/users/1/tasks', {
-    method: 'GET',
-    headers: {'content-type':'application/json'},
-  }).then(res => {
-    if (res.ok) {
-        setDataArray(res.json()) 
-    }
-    // handle error
-  }).then(tasks => {
-    // Do something with the list of tasks
-  }).catch(error => {
-    // handle error
-  })
 
   function RequireAuth({ children }) {
     let location = useLocation();
