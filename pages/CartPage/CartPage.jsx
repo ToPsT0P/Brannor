@@ -35,19 +35,22 @@ const CartPage = ({dataArray, setDataArray}) => {
                 <hr />
             </div>
             <div className="cartBottomSide">
-                <div className="cartList">
-                    {dataArray.map((item, i) => {return (
-                    <CartItem key={i} 
-                     item={item} 
-                     setDataArray = {setDataArray} 
-                     dataArray={dataArray} 
-                     deleteArrayObj={deleteArrayObj}/>)})}
-                     {dataArray.length == 0 && <h2>Товаров в корзине нет</h2>}
+                <div>
+                    <div className="cartList">
+                        {dataArray.map((item, i) => {return (
+                        <CartItem key={i} 
+                        item={item} 
+                        setDataArray = {setDataArray} 
+                        dataArray={dataArray} 
+                        deleteArrayObj={deleteArrayObj}/>)})}
+                        {dataArray.length == 0 && <h2>Товаров в корзине нет</h2>}
 
+                    </div>
                     <div className="cartList_input">
                         <input placeholder="Введите промокод" onChange={(e) => {setUserPromo(e.target.value)}}/>
                         <img src={cartList_inputIMG} alt="" onClick={() => {checkPromo()}}/>
                     </div>
+
                 </div>
                 <div className="cartDetails">
                     <h2>Детали заказа</h2>

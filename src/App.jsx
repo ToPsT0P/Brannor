@@ -11,6 +11,7 @@ import YourOrder from '../pages/YourOrder/YourOrder.jsx'
 import CompanyPage from '../pages/CompanyPage/CompanyPage.jsx'
 import CartPage from '../pages/CartPage/CartPage.jsx'
 import PlacingOrder from '../pages/PlacingOrder/PlacingOrder.jsx'
+import GoodsPage from '../pages/GoodsPage/GoodsPage'
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
   const [dataArray, setDataArray] = useState([])
 
   useEffect(() => {
-    fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/goods')
+    fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods')
     .then((res) => {return res.json()})
     .then((json) => {setDataArray(json)})
 
@@ -65,7 +66,7 @@ function App() {
           <Route path="/profile/yourOrder" element={<RequireAuth><YourOrder/></RequireAuth>}  />
           <Route path="/profile/addCompany" element={<RequireAuth><CompanyPage/></RequireAuth>}  />
           <Route path="/profile/PlacingOrder" element={<RequireAuth><PlacingOrder dataArray={dataArray} setDataArray={setDataArray}/></RequireAuth>}  />
-
+          <Route path='/goods' element={<GoodsPage/>}></Route>
           
           <Route path="/" element={<MainPage/>}/>
           <Route path="*" element={<PageNotFound/>}/>

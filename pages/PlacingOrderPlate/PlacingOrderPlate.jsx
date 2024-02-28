@@ -14,14 +14,12 @@ const PlacingOrderPlate = ({dataArray}) => {
                                 <Plate item={item}/>
                                 
                             )})}
- 
-                        <div>
-                            <button className="OrderCompleteButton">Оформить заказ</button>
-                        </div>
+
     
 
                     </div>
 
+                    <button className="OrderCompleteButton">Оформить заказ</button>
 
                 </div>
     )
