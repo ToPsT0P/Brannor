@@ -17,7 +17,28 @@ function App() {
 
   Userfront.init("9ny6vgyb");
 
+  
   const [dataArray, setDataArray] = useState([])
+  const [allDataArray, setAllDataArray] = useState([])
+  const [userPage, setUserPage] = useState()
+  const [userLimit, setUserLimit] = useState()
+
+  const urlAllData = new URL('https://65c4ab97dae2304e92e312f4.mockapi.io/goods')
+  urlAllData.searchParams.append('page', 1);
+  urlAllData.searchParams.append('limit', 10)
+
+
+  useEffect(() => {
+    fetch(urlAllData, {
+      method: 'GET',
+      headers: {'content-type':'application/json'},
+    }).then((res) => {return res.json()})
+    .then((json) => {setAllDataArray(json)})
+  }, [])
+
+  setInterval(() => {
+    console.log(allDataArray)
+  }, 1000);
 
   useEffect(() => {
     fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods')
@@ -66,11 +87,11 @@ function App() {
           <Route path="/profile/yourOrder" element={<RequireAuth><YourOrder/></RequireAuth>}  />
           <Route path="/profile/addCompany" element={<RequireAuth><CompanyPage/></RequireAuth>}  />
           <Route path="/profile/PlacingOrder" element={<RequireAuth><PlacingOrder dataArray={dataArray} setDataArray={setDataArray}/></RequireAuth>}  />
-          <Route path='/goods' element={<GoodsPage/>}></Route>
           
           <Route path="/" element={<MainPage/>}/>
           <Route path="*" element={<PageNotFound/>}/>
           <Route path="/login" element={<LoginPage/>}/>
+          <Route path='/goods' element={<GoodsPage userLimit={userLimit} allDataArray={allDataArray} setUserLimit={setUserLimit} setUserPage={setUserPage}/>}/>
           <Route path="registration" element={<RegPage/>}/>
 
         </Routes>

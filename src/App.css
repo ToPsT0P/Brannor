@@ -1236,12 +1236,13 @@ color: #FFFFFF;
     display: flex;
     justify-content: space-between;
     grid-row: auto;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .goodsPage_item{
     height: 430px;
     width: 330px;
+    margin-bottom: 25px;
     border: 1px solid #747474a4;
     border-radius: 10px;
 }
