@@ -737,7 +737,8 @@ body{
 
 .cartPage_wrapper{
     width: 100%;
-    height:86vh;
+    height:fit-content;
+    padding-bottom: 40px;
     display: grid;
     padding-top: 13vh;
     justify-content: center;
@@ -762,7 +763,7 @@ body{
     text-align: center;
     border-radius: 15px;
     display: grid;
-    margin-left: 7%;
+    margin-left: 7vh;
     text-align: start;
     padding: 15px;
     background-color: #232122;
@@ -805,7 +806,8 @@ body{
     min-width: 900px;
     width: 910px;
     max-width: 950px;
-    height: 600px;
+    max-height: 600px;
+    min-height: 300px;
     overflow-y: auto;
 }
 
@@ -1237,6 +1239,10 @@ color: #FFFFFF;
     justify-content: space-between;
     grid-row: auto;
     flex-wrap: wrap;
+}
+
+.goodsPage_button{
+    cursor: pointer;
 }
 
 .goodsPage_item{

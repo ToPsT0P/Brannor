@@ -11,7 +11,7 @@ const GoodsItem = () => {
                     <h2>21000Р</h2>
                 </div>
             </div>
-            <button>В корзину</button>
+            <button className="goodsPage_button">В корзину</button>
         </div>
     )
 }

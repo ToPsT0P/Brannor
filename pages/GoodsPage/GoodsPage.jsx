@@ -1,27 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import GoodsItem from "../../components/GoodsItem/GoodsItem";
 
-const GoodsPage = ({allDataArray, setUserLimit, setUserPage, userLimit}) => {
+const GoodsPage = ({allDataArray, setAllDataArray}) => {
 
-    const makingWidth = () => {
-        let windowWidth = window.innerWidth
-        let remainder = windowWidth % 333
-        const quantityItems = (windowWidth - remainder) / 333;
-        return quantityItems
-    }
+  const [userPage, setUserPage] = useState()
+  const [userLimit, setUserLimit] = useState()
+  const urlAllData = new URL('https://65c4ab97dae2304e92e312f4.mockapi.io/goods')
+  urlAllData.searchParams.append('page', 1);
+  let quantityI 
+  urlAllData.searchParams.append('limit', (quantityI = 2 * (window.innerWidth - window.innerWidth % 333) / 333))
 
-    setUserLimit(makingWidth);
+  useEffect(() => {
+      
+      fetch(urlAllData, {
+          method: 'GET',
+          headers: {'content-type':'application/json'},
+      }).then((res) => {return res.json()})
+      .then((json) => {setAllDataArray(json)})
+      
+    }, [])
 
-    setInterval(() => {
-        console.log(allDataArray)
-    }, 1000);
     return(
         <>
             <div className="goodsPage_wrapper">
                 <h1>Вся продукция</h1>
                 <div className="goodsPage_itemlist">
                     {allDataArray.map((i, item) => {
-                        <GoodsItem/>
+                        return <GoodsItem/>
                     })}
                 </div>
             </div>

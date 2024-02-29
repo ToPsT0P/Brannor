@@ -11,7 +11,7 @@ const Plate = ({item}) => {
                     <div className="PlacingOrdersPlate_text">
                     <p className="PlacingOrdersPlate_text_name">{item.name}</p>
                     <p>{item.quantity}</p>
-                    <p>{`${item.price}Р`}</p>
+                    <p>{`${item.price * item.quantity}Р`}</p>
                 </div>
             </div>
             <hr className="borderItems"/>
