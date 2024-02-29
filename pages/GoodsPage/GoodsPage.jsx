@@ -25,9 +25,21 @@ const GoodsPage = ({allDataArray, setAllDataArray}) => {
             <div className="goodsPage_wrapper">
                 <h1>Вся продукция</h1>
                 <div className="goodsPage_itemlist">
-                    {allDataArray.map((i, item) => {
-                        return <GoodsItem/>
+                    {allDataArray.map((item, i) => {
+                        return <GoodsItem item={item}/>
                     })}
+                </div>
+                <div className="goodsPaage_pagination">
+                   <button>1</button>
+                   <button>2</button>
+                   <button>3</button>
+                   <button>4</button>
+                   <button>5</button>
+                   <button>6</button>
+                   <button>7</button>
+                   <button>8</button>
+                   <button>9</button>
+                   <input type="text" />
                 </div>
             </div>
         </>

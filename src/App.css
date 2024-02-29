@@ -1287,3 +1287,13 @@ color: #FFFFFF;
     border-radius: 34px;
 
 }
+
+.goodsPaage_pagination{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.goodsPaage_pagination button{
+    width: 50px;
+    height: 40px;
+}
