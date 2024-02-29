@@ -1,8 +1,5 @@
 const GoodsItem = ({item}) => {
 
-    setInterval(() => {
-        console.log(item)
-    }, 1000);
     return(
         <div className="goodsPage_item">
             <div className="goodsPage_itemImg">

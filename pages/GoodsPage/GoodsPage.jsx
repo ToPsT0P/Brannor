@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import GoodsItem from "../../components/GoodsItem/GoodsItem";
+import Pagination from "../../components/Pagination/Pagination";
 
 const GoodsPage = ({allDataArray, setAllDataArray}) => {
 
-  const [userPage, setUserPage] = useState()
-  const [userLimit, setUserLimit] = useState()
+  const [userPage, setUserPage] = useState(1)
   const urlAllData = new URL('https://65c4ab97dae2304e92e312f4.mockapi.io/goods')
-  urlAllData.searchParams.append('page', 1);
+  urlAllData.searchParams.append('page', userPage || 1);
   let quantityI 
   urlAllData.searchParams.append('limit', (quantityI = 2 * (window.innerWidth - window.innerWidth % 333) / 333))
 
@@ -18,7 +18,7 @@ const GoodsPage = ({allDataArray, setAllDataArray}) => {
       }).then((res) => {return res.json()})
       .then((json) => {setAllDataArray(json)})
       
-    }, [])
+    }, [userPage])
 
     return(
         <>
@@ -29,18 +29,7 @@ const GoodsPage = ({allDataArray, setAllDataArray}) => {
                         return <GoodsItem item={item}/>
                     })}
                 </div>
-                <div className="goodsPaage_pagination">
-                   <button>1</button>
-                   <button>2</button>
-                   <button>3</button>
-                   <button>4</button>
-                   <button>5</button>
-                   <button>6</button>
-                   <button>7</button>
-                   <button>8</button>
-                   <button>9</button>
-                   <input type="text" />
-                </div>
+                <Pagination setUserPage={setUserPage}/>
             </div>
         </>
     )

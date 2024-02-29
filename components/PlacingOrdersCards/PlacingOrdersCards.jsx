@@ -8,7 +8,6 @@ const PlacingOrdersCards = () => {
     const choosingMethod = (props) => {
         let newEl = document.getElementById(props)
         setChoosed(props)
-        console.log(choosed)
         if(newEl.classList.contains("activeDeliveryCard")){
             newEl.classList.remove("activeDeliveryCard")
             

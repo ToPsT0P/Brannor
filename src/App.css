@@ -737,7 +737,7 @@ body{
 
 .cartPage_wrapper{
     width: 100%;
-    height:fit-content;
+    height:85vh;
     padding-bottom: 40px;
     display: grid;
     padding-top: 13vh;
@@ -1236,6 +1236,9 @@ color: #FFFFFF;
 .goodsPage_itemlist{
     margin-top: 30px;
     display: flex;
+    height: 915px;
+    min-height: 915px;
+    max-height: 915px;
     justify-content: space-between;
     grid-row: auto;
     flex-wrap: wrap;
@@ -1295,5 +1298,23 @@ color: #FFFFFF;
 
 .goodsPaage_pagination button{
     width: 50px;
+    cursor: pointer;
     height: 40px;
+    background-color: #232122;
+    border: 1px solid #FFFFFF80;
+    margin-right: 7px;
+    color: white;
+    border-radius: 6px;
+}
+
+
+.goodsPaage_pagination input{
+    width: 15%;
+    padding-left: 15px;
+    height: 40px;
+    background-color: #232122;
+    border: 1px solid #FFFFFF80;
+    margin-right: 7px;
+    color: white;
+    border-radius: 6px;
 }
