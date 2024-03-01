@@ -20,13 +20,21 @@ const GoodsPage = ({allDataArray, setAllDataArray}) => {
       
     }, [userPage])
 
+    const addingToBought = (arrayObj) => {
+        fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods', {
+          method: 'POST',
+          headers: {'content-type':'application/json'},
+          body: JSON.stringify(arrayObj, arrayObj.quantity = 1)
+        }).then((res) => {return res.json()})}
+  
+
     return(
         <>
             <div className="goodsPage_wrapper">
                 <h1>Вся продукция</h1>
                 <div className="goodsPage_itemlist">
                     {allDataArray.map((item, i) => {
-                        return <GoodsItem item={item}/>
+                        return <GoodsItem item={item} addingToBought={addingToBought}/>
                     })}
                 </div>
                 <Pagination setUserPage={setUserPage}/>

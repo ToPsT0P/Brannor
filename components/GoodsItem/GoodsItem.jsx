@@ -1,5 +1,11 @@
-const GoodsItem = ({item}) => {
+const GoodsItem = ({item, addingToBought}) => {
 
+    const addingGoods = ({item}) => {
+
+        addingToBought(item)
+        let el = document.getElementById(`${item.name}id`)
+        el.classList.add("activeCart")
+    }
     return(
         <div className="goodsPage_item">
             <div className="goodsPage_itemImg">
@@ -11,7 +17,7 @@ const GoodsItem = ({item}) => {
                     <h2>{item.price}Р</h2>
                 </div>
             </div>
-            <button className="goodsPage_button">В корзину</button>
+            <button id={`${item.name}id`} className="goodsPage_button" onClick={() => {addingGoods(item)}}>В корзину</button>
         </div>
     )
 }
