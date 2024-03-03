@@ -2,12 +2,21 @@ import React, { useEffect, useState } from "react";
 import CartItem from "../../components/CartItem/CartItem";
 import cartList_inputIMG from "../../public/CartList_inputIMG.png"
 
-const CartPage = ({dataArray, setDataArray}) => {
+const CartPage = ({}) => {
 
     const promo = ["123qwe","asdqwe"]
     const [userPromo, setUserPromo] = useState("")
     const [promoAnswer, setPromoAnswer] = useState(false)
+    const [checkbox, setCheckbox] = useState(false)
+    const [dataArray, setDataArray] = useState([])
 
+
+    useEffect(() => {
+      fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods')
+      .then((res) => {return res.json()})
+      .then((json) => {setDataArray(json)})
+  
+    }, [checkbox])
   
 
     const checkPromo = () => {
@@ -23,9 +32,15 @@ const CartPage = ({dataArray, setDataArray}) => {
         }
 
     }
-    
-    const deleteArrayObj = (props) => {
-        setDataArray(dataArray.filter(p => p !== props))
+
+    const addingGoodsToServer = (array) => {
+        fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/`, {
+        method: 'PUT', // or PATCH
+        headers: {'content-type':'application/json'},
+        body: JSON.stringify({quantity: 22})})
+
+        window.location.assign("/profile/PlacingOrder")
+
     }
 
     return(
@@ -39,10 +54,11 @@ const CartPage = ({dataArray, setDataArray}) => {
                     <div className="cartList">
                         {dataArray.map((item, i) => {return (
                         <CartItem key={i} 
+                        setCheckbox = {setCheckbox}
+                        checkbox = {checkbox}
                         item={item} 
                         setDataArray = {setDataArray} 
-                        dataArray={dataArray} 
-                        deleteArrayObj={deleteArrayObj}/>)})}
+                        dataArray={dataArray} />)})}
                         {dataArray.length == 0 && <h2>Товаров в корзине нет</h2>}
 
                     </div>
@@ -82,7 +98,7 @@ const CartPage = ({dataArray, setDataArray}) => {
                             1232₽ 
                         </div>
                     </div>
-                    <button onClick={() => {window.location.assign("/profile/PlacingOrder")}}>Оформить заказ</button>
+                    <button onClick={() => {addingGoodsToServer()}}>Оформить заказ</button>
                 </div>
 
             </div>

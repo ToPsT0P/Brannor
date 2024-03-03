@@ -18,16 +18,8 @@ function App() {
   Userfront.init("9ny6vgyb");
 
   
-  const [dataArray, setDataArray] = useState([])
   const [allDataArray, setAllDataArray] = useState([])
 
-
-  useEffect(() => {
-    fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods')
-    .then((res) => {return res.json()})
-    .then((json) => {setDataArray(json)})
-
-  }, [])
 
   function LoginPage(){
     return(
@@ -65,10 +57,10 @@ function App() {
 
           </Route>
           <Route path="/profile/delivery" element={<RequireAuth><DeliverPage/></RequireAuth>}  />
-          <Route path="/profile/cart" element={<RequireAuth><CartPage dataArray={dataArray} setDataArray={setDataArray}/></RequireAuth>}  />
+          <Route path="/profile/cart" element={<RequireAuth><CartPage /></RequireAuth>}  />
           <Route path="/profile/yourOrder" element={<RequireAuth><YourOrder/></RequireAuth>}  />
           <Route path="/profile/addCompany" element={<RequireAuth><CompanyPage/></RequireAuth>}  />
-          <Route path="/profile/PlacingOrder" element={<RequireAuth><PlacingOrder dataArray={dataArray} setDataArray={setDataArray}/></RequireAuth>}  />
+          <Route path="/profile/PlacingOrder" element={<RequireAuth><PlacingOrder/></RequireAuth>}  />
           
           <Route path="/" element={<MainPage/>}/>
           <Route path="*" element={<PageNotFound/>}/>
