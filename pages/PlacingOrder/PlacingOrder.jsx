@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PlacingOrdersCards from "../../components/PlacingOrdersCards/PlacingOrdersCards";
 import PlacingOrdersPayments from "../../components/PlacingIrdersPayment/PlacingOrdersPayments";
 import PlacingOrderPlate from "../PlacingOrderPlate/PlacingOrderPlate";
-const PlacingOrder = ({dataArray, setDataArray}) => {
+import PersonalDataOrder from "../../components/PersonalDataOrder/PersonalDataOrder";
+const PlacingOrder = ({}) => {
 
+    const [dataArray, setDataArray] = useState([])
+
+    useEffect(() => {
+        fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods')
+        .then((res) => {return res.json()})
+        .then((json) => {setDataArray(json)})
+    
+      }, [])
+    
     return(
         <>
         <div className="PlacingOrder_wrapper">
@@ -16,26 +26,7 @@ const PlacingOrder = ({dataArray, setDataArray}) => {
                 <PlacingOrdersPayments/>
             
             </div>
-            <div>
-                <h3>Личные данные</h3>
-                <div className="personalDataInputs">
-                    <div>
-                        <label htmlFor="">Имя</label>
-                        <input type="text" />
-                    </div>
-                    <div>
-                        <label htmlFor="">E-mail</label>
-                        <input type="text" />
-                    </div>
-                    <div>
-                            <label htmlFor="">Номер телефона</label>
-                        <input type="text" />
-                    </div>
-                </div>
-            </div>
-            <div className="inputMoreData">
-                <input type="text" />
-            </div>
+            <PersonalDataOrder/>
 
         </div>
         </>

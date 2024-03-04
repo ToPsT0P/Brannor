@@ -1,10 +1,9 @@
 const GoodsItem = ({item, addingToBought}) => {
 
-    const addingGoods = ({item}) => {
+    const addingGoods = (item) => {
 
         addingToBought(item)
-        let el = document.getElementById(`${item.name}id`)
-        el.classList.add("activeCart")
+    
     }
     return(
         <div className="goodsPage_item">
