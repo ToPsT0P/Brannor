@@ -21,7 +21,7 @@ const Navbar = () => {
             <a href="">Компания</a>
             <a onClick={() => window.location.assign("/goods")}>Продукция</a>
             <a href="">Поддержка</a>
-            <a href="">Где купить</a>
+            <a onClick={() => window.location.assign("/aboutCompany")}>Где купить</a>
             {!Userfront.tokens.accessToken &&  <button className="buttonLogin" onClick={() => window.location.assign("/login")}>Вход</button>}
             {Userfront.tokens.accessToken && <img className="userPngStyle" onClick={() => window.location.assign("/profile")} src={userPng}/>}
         
