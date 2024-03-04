@@ -1,31 +1,10 @@
 import React, { useEffect, useState } from "react";
 import itemPng from "../../public/pngCart.png"
 
-const CartItem = ({item, setDataArray, dataArray, setCheckbox, checkbox}) => {
+const CartItem = ({item, setDataArray, dataArray}) => {
     
     const [quantity, setQuantity] = useState(item.quantity)
-    
 
-    // const addQuantity = (item) => {
-    //     fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/${item.id}`, {
-    //     method: 'PUT', // or PATCH
-    //     headers: {'content-type':'application/json'},
-    //     body: JSON.stringify({quantity: 22})
-    //     })
-
-    //     setCheckbox(!checkbox)
-    // }
-
-    // const deleteQuantity = (item) => {
-
-    //     fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/${item.id}`, {
-    //     method: 'PUT', // or PATCH
-    //     headers: {'content-type':'application/json'},
-    //     body: JSON.stringify({quantity: quantity})
-    //     })
-
-    //     setCheckbox(!checkbox)
-    // }
 
 
     return(

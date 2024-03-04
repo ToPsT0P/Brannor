@@ -826,6 +826,8 @@ body{
 .cartItem img{
     margin-left: 20px;
     width: 75px;
+    min-width: 75px;
+    min-height: 75px;
     border-radius: 7px;
     height: 75px;
 }

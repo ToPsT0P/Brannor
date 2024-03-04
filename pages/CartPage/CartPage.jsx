@@ -7,16 +7,14 @@ const CartPage = ({}) => {
     const promo = ["123qwe","asdqwe"]
     const [userPromo, setUserPromo] = useState("")
     const [promoAnswer, setPromoAnswer] = useState(false)
-    const [checkbox, setCheckbox] = useState(false)
     const [dataArray, setDataArray] = useState([])
-
 
     useEffect(() => {
       fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods')
       .then((res) => {return res.json()})
       .then((json) => {setDataArray(json)})
   
-    }, [checkbox])
+    }, [])
   
 
     const checkPromo = () => {
@@ -36,8 +34,7 @@ const CartPage = ({}) => {
     const addingGoodsToServer = (array) => {
         fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/`, {
         method: 'PUT', // or PATCH
-        headers: {'content-type':'application/json'},
-        body: JSON.stringify({quantity: 22})})
+        headers: {'content-type':'application/json'}})
 
         window.location.assign("/profile/PlacingOrder")
 
@@ -53,9 +50,8 @@ const CartPage = ({}) => {
                 <div>
                     <div className="cartList">
                         {dataArray.map((item, i) => {return (
-                        <CartItem key={i} 
-                        setCheckbox = {setCheckbox}
-                        checkbox = {checkbox}
+                        <CartItem 
+                        key={i} 
                         item={item} 
                         setDataArray = {setDataArray} 
                         dataArray={dataArray} />)})}

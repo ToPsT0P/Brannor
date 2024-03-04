@@ -65,7 +65,7 @@ function App() {
           
           <Route path="/" element={<MainPage/>}/>
           <Route path="*" element={<PageNotFound/>}/>
-          <Route path='aboutCompany' element={<AboutCompany/>}/>
+          <Route path='/aboutCompany' element={<AboutCompany/>}/>
           <Route path="/login" element={<LoginPage/>}/>
           <Route path='/goods' element={<GoodsPage setAllDataArray={setAllDataArray} allDataArray={allDataArray}/>}/>
           <Route path="registration" element={<RegPage/>}/>
