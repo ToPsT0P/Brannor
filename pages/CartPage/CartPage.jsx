@@ -16,6 +16,10 @@ const CartPage = ({}) => {
   
     }, [])
   
+    
+    const deleteGoodsFromUser = ({item}) => {                        //Сравнить item с каждым элементом
+        setDataArray(Products.filter(p => p !== item));
+    }
 
     const checkPromo = () => {
         let i = 0
@@ -31,14 +35,7 @@ const CartPage = ({}) => {
 
     }
 
-    const addingGoodsToServer = (array) => {
-        fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/`, {
-        method: 'PUT', // or PATCH
-        headers: {'content-type':'application/json'}})
 
-        window.location.assign("/profile/PlacingOrder")
-
-    }
 
     return(
         <div className="cartPage_wrapper">
@@ -49,12 +46,13 @@ const CartPage = ({}) => {
             <div className="cartBottomSide">
                 <div>
                     <div className="cartList">
-                        {dataArray.map((item, i) => {return (
+                        {dataArray.map((item, i) => {if(item.quantity >= 0){ return(
                         <CartItem 
+                        deleteGoodsFromUser = {deleteGoodsFromUser}
                         key={i} 
                         item={item} 
                         setDataArray = {setDataArray} 
-                        dataArray={dataArray} />)})}
+                        dataArray={dataArray} />)}})}
                         {dataArray.length == 0 && <h2>Товаров в корзине нет</h2>}
 
                     </div>
@@ -94,7 +92,7 @@ const CartPage = ({}) => {
                             1232₽ 
                         </div>
                     </div>
-                    <button onClick={() => {addingGoodsToServer()}}>Оформить заказ</button>
+                    <button onClick={() => {window.location.assign("/profile/PlacingOrder")}}>Оформить заказ</button>
                 </div>
 
             </div>
