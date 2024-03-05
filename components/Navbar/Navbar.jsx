@@ -18,7 +18,7 @@ const Navbar = () => {
                 <input type="text" placeholder="Введите название товара..." />
                 <img src={searchPNG} alt="" />
             </div>
-            <a onClick={() => window.location.assign("/aboutCompany")}>Компания</a>
+            <a onClick={() => window.location.assign("/")}>Компания</a>
             <a onClick={() => window.location.assign("/goods")}>Продукция</a>
             <a href="">Поддержка</a>
             <a >Где купить</a>

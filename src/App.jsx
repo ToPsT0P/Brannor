@@ -12,7 +12,6 @@ import CompanyPage from '../pages/CompanyPage/CompanyPage.jsx'
 import CartPage from '../pages/CartPage/CartPage.jsx'
 import PlacingOrder from '../pages/PlacingOrder/PlacingOrder.jsx'
 import GoodsPage from '../pages/GoodsPage/GoodsPage'
-import AboutCompany from '../pages/AboutCompany/AboutCompany.jsx'
 
 function App() {
 
@@ -65,7 +64,6 @@ function App() {
           
           <Route path="/" element={<MainPage/>}/>
           <Route path="*" element={<PageNotFound/>}/>
-          <Route path='/aboutCompany' element={<AboutCompany/>}/>
           <Route path="/login" element={<LoginPage/>}/>
           <Route path='/goods' element={<GoodsPage setAllDataArray={setAllDataArray} allDataArray={allDataArray}/>}/>
           <Route path="registration" element={<RegPage/>}/>
