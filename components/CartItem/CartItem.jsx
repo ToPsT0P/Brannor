@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import itemPng from "../../public/pngCart.png"
 
-const CartItem = ({item, setFlag, flag, key}) => {
+const CartItem = ({item, setFlag, flag, key, deleteUserItem}) => {
 
     const [userQuantity, setUserQuantity] = useState(() => item.quantity)
 
@@ -16,8 +16,9 @@ const CartItem = ({item, setFlag, flag, key}) => {
 
     const deleteGoodsFromServer = (props) => {
         setUserQuantity(userQuantity - 1)
-        if(userQuantity - 1 <= 0) {
+        if(userQuantity -1 == 0) {
             setFlag(!flag)
+            deleteUserItem(item)
             fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/${props.id}`, {
                 method: 'DELETE',
 
@@ -37,7 +38,7 @@ const CartItem = ({item, setFlag, flag, key}) => {
                         <img src={`../../public/${item.imageURL}`} alt="" />
                         <h3 className="cartNaming">{item.name}</h3>
                         <div>
-                            <button className="cartNamingButton" onClick={() => {deleteGoodsFromServer(item)}}>-</button>
+                            <button className="cartNamingButton" onClick={(e) => {deleteGoodsFromServer(item)}}>-</button>
                             <p>{userQuantity}</p>
                             <button className="cartNamingButton" onClick={() => {addingGoodsToServer()}}>+</button>
                         </div>
