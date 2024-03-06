@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import itemPng from "../../public/pngCart.png"
 
-const CartItem = ({item, deleteGoodsFromUser}) => {
+const CartItem = ({item, setFlag, flag, key}) => {
 
-    const [userQuantity, setUserQuantity] = useState(item.quantity)
+    const [userQuantity, setUserQuantity] = useState(() => item.quantity)
 
     const addingGoodsToServer = () => {
         setUserQuantity(userQuantity + 1)
@@ -14,17 +14,17 @@ const CartItem = ({item, deleteGoodsFromUser}) => {
     }
 
 
-    const deleteGoodsFromServer = (item) => {
+    const deleteGoodsFromServer = (props) => {
         setUserQuantity(userQuantity - 1)
-        if(userQuantity <= 1) {
-            deleteGoodsFromServer(item)
-            fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/${item.id}`, {
+        if(userQuantity - 1 <= 0) {
+            setFlag(!flag)
+            fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/${props.id}`, {
                 method: 'DELETE',
 
             })
 
         }
-        fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/${item.id}`, {
+        fetch(`https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods/${props.id}`, {
             method: 'PUT', // or PATCH
             headers: {'content-type':'application/json'},
             body: JSON.stringify({quantity: userQuantity - 1})})
@@ -33,7 +33,7 @@ const CartItem = ({item, deleteGoodsFromUser}) => {
 
     return(
         <>
-            <div className="cartItem">
+            <div className="cartItem" id={key}>
                         <img src={`../../public/${item.imageURL}`} alt="" />
                         <h3 className="cartNaming">{item.name}</h3>
                         <div>

@@ -2,24 +2,22 @@ import React, { useEffect, useState } from "react";
 import CartItem from "../../components/CartItem/CartItem";
 import cartList_inputIMG from "../../public/CartList_inputIMG.png"
 
-const CartPage = ({}) => {
+const CartPage = () => {
 
     const promo = ["123qwe","asdqwe"]
     const [userPromo, setUserPromo] = useState("")
     const [promoAnswer, setPromoAnswer] = useState(false)
     const [dataArray, setDataArray] = useState([])
+    const [flag, setFlag] = useState(false)
 
     useEffect(() => {
       fetch('https://65c4ab97dae2304e92e312f4.mockapi.io/wonnaBuyGoods')
       .then((res) => {return res.json()})
       .then((json) => {setDataArray(json)})
   
-    }, [])
+    }, [flag])
   
     
-    const deleteGoodsFromUser = ({item}) => {                        //Сравнить item с каждым элементом
-        setDataArray(Products.filter(p => p !== item));
-    }
 
     const checkPromo = () => {
         let i = 0
@@ -47,12 +45,12 @@ const CartPage = ({}) => {
                 <div>
                     <div className="cartList">
                         {dataArray.map((item, i) => {if(item.quantity >= 0){ return(
-                        <CartItem 
-                        deleteGoodsFromUser = {deleteGoodsFromUser}
+                        <CartItem
                         key={i} 
+                        setFlag={setFlag}
+                        flag={flag}
                         item={item} 
-                        setDataArray = {setDataArray} 
-                        dataArray={dataArray} />)}})}
+                         />)}})}
                         {dataArray.length == 0 && <h2>Товаров в корзине нет</h2>}
 
                     </div>
